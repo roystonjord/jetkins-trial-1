@@ -3,12 +3,12 @@ pipeline {
   stages {
     stage('myStage'){
       steps {
-        sh 'ls -la' 
+        bat 'mvn clean' 
       }
     }
     stage('Build') {
       steps { 
-        sh 'ls' 
+        bat 'mvn test' 
       }
     }
   }
